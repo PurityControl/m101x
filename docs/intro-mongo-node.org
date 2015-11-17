@@ -57,3 +57,44 @@ to change to a specific version use
 
 ~nvm use 5.0~
 
+** node and npm
+
+Once installed you should be able to see what versions of node and npm
+you have.
+
+#+BEGIN_SRC bash
+node -v
+npm -v
+#+END_SRC
+
+
+* NodeJS and package.json
+
+When starting a new nodejs application, the first thing to setup is a
+~package.json~ file. This file provides the projects metadata including:
+
+- Name of the application
+- Application version
+- Application author
+- dependencies
+
+One of the most useful parts of this file is the package dependencies.
+They are declared in the file and can then be installed using
+
+#+BEGIN_SRC bash
+npm install
+#+END_SRC
+
+Once installed they will reside in a subdirectory of the project called
+~node_modules~.
+
+By storing the modules in the project, each project can have its own package
+and version without conflicts with other projects using different versions
+of the package.
+
+The nodejs community hotly debate whether these dependencies should be version
+controlled. The default github ~.gitignore~ file excludes them.
+Current best practice is to exclude them because frequently they have
+compiled binaries that are os specific.
+
+
