@@ -1,0 +1,15 @@
+#+TITLE: Introduction to MongoDB and Node.JS (Week 1)
+
+* Install MongoDB
+
+The simplest way to install mongodb for development purposes is to [[https://www.mongodb.org/downloads#production][download]]
+the mongodb tgz archive. There are options for all the major os / distros.
+
+- Extract the archive
+- Run mongod in the shell
+  - this allows you to view logs easily and quit easily
+- run a mongo shell in a second terminal
+- you can make startup easier by adding the mongo bin directory to your path
+  - you will then just have to type ~mongod~ or ~mongo~ to launch the database
+    and shell respectively.
+    
