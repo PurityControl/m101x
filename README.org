@@ -4,6 +4,10 @@
 The course is offered by EDX. More details about the course can be found
 at their [[https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x][website.]]
 
+** Notes
+
+[[file:docs/intro-mongo-node.org][Introduction to mongodb and nodejs]]
+
 ** Purpose
 This repo is purely for making notes and completing the homeworks as I
 progress through the course.
