@@ -13,3 +13,47 @@ the mongodb tgz archive. There are options for all the major os / distros.
   - you will then just have to type ~mongod~ or ~mongo~ to launch the database
     and shell respectively.
     
+* Install NodeJs
+
+NodeJS can be installed by downloading and installing node from
+the [[https://nodejs.org/en/][NodeJS website.]]
+
+Alternatively you can install a node version manager for your operating
+system. NVM will then let you install and manage multiple node versions.
+
+** Windows
+
+There is a nvm-windows application available on [[https://github.com/coreybutler/nvm-windows][github]].
+This comes with and installer and uninstaller.
+
+** Linux / Mac
+
+There is a *nix nvm application hosted on [[https://github.com/creationix/nvm][github]].
+
+The easiest way to install this is with 
+
+#+BEGIN_SRC bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+#+END_SRC
+
+Once installed make sure the nvm script has been added to the correct
+bash config file.
+
+the nvm install adds its config to ~.bashrc~ but for mac it needs to be
+added to ~.bash_login~ and for linux to ~.bash_profile~
+
+*** *nix default setup
+
+install a version of node with
+
+~nvm install 5.0~
+
+onces you have a version set a default so a version of node is available
+when a shell is launched
+
+~nvm alias default 5.0~
+
+to change to a specific version use 
+
+~nvm use 5.0~
+
