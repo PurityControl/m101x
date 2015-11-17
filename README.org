@@ -1,0 +1,13 @@
+#+TITLE: Introduction to MongoDB using the MEAN Stack
+
+* About the course
+The course is offered by EDX. More details about the course can be found
+at their [[https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x][website.]]
+
+** Purpose
+This repo is purely for making notes and completing the homeworks as I
+progress through the course.
+
+** License
+The material provided by EDX is subject to their own licensing terms.
+The work I have done is subject to this [[file:LICENSE][repo's license.]]
