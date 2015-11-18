@@ -1,0 +1,100 @@
+#+TITLE: Introduction to MongoDB and Node.JS (Week 1)
+
+* Install MongoDB
+
+The simplest way to install mongodb for development purposes is to [[https://www.mongodb.org/downloads#production][download]]
+the mongodb tgz archive. There are options for all the major os / distros.
+
+- Extract the archive
+- Run mongod in the shell
+  - this allows you to view logs easily and quit easily
+- run a mongo shell in a second terminal
+- you can make startup easier by adding the mongo bin directory to your path
+  - you will then just have to type ~mongod~ or ~mongo~ to launch the database
+    and shell respectively.
+    
+* Install NodeJs
+
+NodeJS can be installed by downloading and installing node from
+the [[https://nodejs.org/en/][NodeJS website.]]
+
+Alternatively you can install a node version manager for your operating
+system. NVM will then let you install and manage multiple node versions.
+
+** Windows
+
+There is a nvm-windows application available on [[https://github.com/coreybutler/nvm-windows][github]].
+This comes with and installer and uninstaller.
+
+** Linux / Mac
+
+There is a *nix nvm application hosted on [[https://github.com/creationix/nvm][github]].
+
+The easiest way to install this is with 
+
+#+BEGIN_SRC bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+#+END_SRC
+
+Once installed make sure the nvm script has been added to the correct
+bash config file.
+
+the nvm install adds its config to ~.bashrc~ but for mac it needs to be
+added to ~.bash_login~ and for linux to ~.bash_profile~
+
+*** *nix default setup
+
+install a version of node with
+
+~nvm install 5.0~
+
+onces you have a version set a default so a version of node is available
+when a shell is launched
+
+~nvm alias default 5.0~
+
+to change to a specific version use 
+
+~nvm use 5.0~
+
+** node and npm
+
+Once installed you should be able to see what versions of node and npm
+you have.
+
+#+BEGIN_SRC bash
+node -v
+npm -v
+#+END_SRC
+
+
+* NodeJS and package.json
+
+When starting a new nodejs application, the first thing to setup is a
+~package.json~ file. This file provides the projects metadata including:
+
+- Name of the application
+- Application version
+- Application author
+- dependencies
+
+One of the most useful parts of this file is the package dependencies.
+They are declared in the file and can then be installed using
+
+#+BEGIN_SRC bash
+npm install
+#+END_SRC
+
+Once installed they will reside in a subdirectory of the project called
+~node_modules~.
+
+By storing the modules in the project, each project can have its own package
+and version without conflicts with other projects using different versions
+of the package.
+
+The nodejs community hotly debate whether these dependencies should be version
+controlled. The default github ~.gitignore~ file excludes them.
+Current best practice is to exclude them because frequently they have
+compiled binaries that are os specific.
+
+
